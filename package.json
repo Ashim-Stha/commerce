@@ -6,17 +6,22 @@
     "start": "next start",
     "prettier": "prettier --write --ignore-unknown .",
     "prettier:check": "prettier --check --ignore-unknown .",
-    "test": "pnpm prettier:check"
+    "test:e2e": "cucumber-js --require cucumber.conf.js --require tests/acceptance/stepDefinitions/*.js --format @cucumber/pretty-formatter"
   },
   "dependencies": {
+    "@cucumber/cucumber": "^12.0.0",
+    "@cucumber/pretty-formatter": "^1.0.1",
     "@headlessui/react": "^2.2.0",
     "@heroicons/react": "^2.2.0",
+    "@playwright/test": "^1.54.1",
     "clsx": "^2.1.1",
     "geist": "^1.3.1",
     "next": "15.3.0-canary.13",
+    "playwright": "^1.54.1",
     "react": "19.0.0",
     "react-dom": "19.0.0",
-    "sonner": "^2.0.1"
+    "sonner": "^2.0.1",
+    "ts-node": "^10.9.2"
   },
   "devDependencies": {
     "@tailwindcss/container-queries": "^0.1.1",
